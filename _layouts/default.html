@@ -2,11 +2,30 @@
 <html>
 <head>
     <title>{% if page.title %} {{ page.title }} | {% endif %} Python Peeps</title>
+    <link type="text/css" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
 <div>
-    <h1>Python Peeps</h1>
-    {{ content }}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#">Python Peeps</a>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a href="https://twitter.com/pythonpeeps" class="twitter-follow-button" data-show-count="false">Follow @pythonpeeps</a>
+                    <li><iframe class="github-star-button" src="http://ghbtns.com/github-btn.html?user=pythonpeeps&repo=pythonpeeps.github.io&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Python Peeps</h1>
+        {{ content }}
+    </div>
 </div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>
